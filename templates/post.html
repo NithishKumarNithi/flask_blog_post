@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ title }}{% endblock title%}
+
+{% block content %}
+
+<h1> Add posts</h1>
+
+<div class="container my-5 px-5">
+        <form role="form" method="POST" >
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="name"
+                placeholder="Title for Posts" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="posts">Post</label>
+                <textarea  class="form-control" id="posts"  placeholder="Enter the Message" name="post-content" required>
+                </textarea>
+            </div>
+            <button type="submit" class="btn btn-block btn-primary">Save</button>
+        </form>
+</div>
+
+{% endblock content%}

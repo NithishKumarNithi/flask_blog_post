@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% block title%}{{ title }}{% endblock title %}
+
+{% block content %}
+   
+    <h1>Posts created by users</h1>
+    {% for post in posts%}
+        <p>Author : {{ post['username']}}</p>
+        <p>Title     : {{ post['title'] }}</p>
+        <p>Post      : {{ post['post'] }}</p>
+        <hr>
+    {% endfor %}
+    <!-- {% for post in posts%}
+        <p>Id        : {{ post['id'] }}</p>
+        <p>Username     : {{ post['username'] }}</p>
+        <p>Password      : {{ post['password'] }}</p>
+    {% endfor %} -->
+
+{% endblock content %}
